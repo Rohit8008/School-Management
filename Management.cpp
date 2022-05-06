@@ -1,5 +1,7 @@
 #include<iostream>
-#include <windows.h>
+#include<ios>
+#include<limits>
+#include<windows.h>
 #include<string>
 #include<fstream>
 using namespace std;
@@ -10,8 +12,7 @@ class Management
     string fname,lname,email,address,uid,phone,dob,stream;
     int i,j;
 
-
-    void Main_Menu()
+    Management()
     {
         int choice;
         cout<<"\t\t\tWelcome to Chitkara University Manager!!!\n\n\n";
@@ -67,7 +68,7 @@ class Management
                                 cout<<"Enter Date Of Birth ";
                                 cin>>dob;
                                 S1<<uid<<endl<<fname<<endl<<lname<<endl<<phone<<endl<<stream<<endl<<dob<<endl<<endl;
-                                cout<<"Do you want to enter data: ";
+                                cout<<"Do you want to enter more data: ";
                                 cout<<"Press Y for Continue and N to Finish:  ";
                                 cin>>choice;
                             }
@@ -114,7 +115,7 @@ class Management
                     continue;
                 case '3':
                     system("cls");
-                    Main_Menu();
+                    Management();
                 }
                 break;
             }
@@ -158,7 +159,7 @@ class Management
                                 cout<<"Which Subject Teacher : ";
                                 cin>>sub;
                                 T1<<uid<<endl<<fname<<endl<<lname<<endl<<phone<<endl<<dob<<endl<<qual<<endl<<exp<<endl<<sub<<endl<<endl;
-                                cout<<"Do you want to enter data: ";
+                                cout<<"Do you want to enter more data: ";
                                 cout<<"Press Y for Continue and N to Finish:  ";
                                 cin>>choice;
                             }
@@ -210,7 +211,7 @@ class Management
                     continue;
                 case '3':
                     system("cls");
-                    Main_Menu();
+                    Management();
                 }
                 break;
             }
@@ -220,5 +221,5 @@ class Management
 int main()
 {
     Management obj;
-    obj.Main_Menu();
+    //obj.Main_Menu();
 }
